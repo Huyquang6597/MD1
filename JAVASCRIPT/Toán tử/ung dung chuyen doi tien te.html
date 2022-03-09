@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr {
+            text-indent: 1cm;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="n1"></td>
+        <td>
+            <select>
+                <option>Việt Nam</option>
+            </select>
+        </td>
+        <td>
+            <select>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="a1()" id="doitien" style="background: purple ; color: white">Convert</button>
+        </td>
+    </tr>
+</table>
+<h2 id="ketqua" style="color: blue">Reasult: </h2>
+<script>
+    function a1(){
+        let b1 = document.getElementById("n1").value;
+        let kq = b1/23000;
+        document.getElementById("ketqua").innerHTML = kq;
+    }
+</script>
+</body>
+</html>
