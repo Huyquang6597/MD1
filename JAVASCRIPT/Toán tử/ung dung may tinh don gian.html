@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung may tinh don gian</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="text" id="n1">
+<input type="text" id="n2">
+<br>
+<br>
+<button onclick="a1()" id="cong">Addition(+)</button>
+<button onclick="a2()" id="tru">Subtraction(-)</button>
+<button onclick="a3()" id="nhan">Multiplication(X)</button>
+<button onclick="a4()" id="chia">Division(/)</button>
+<h2 id="ketqua">Result: </h2>
+<script>
+    function a1(){
+        let b1 = +document.getElementById("n1").value;
+        let b2 = +document.getElementById("n2").value;
+        let result1 = b1 + b2;
+        document.getElementById("ketqua").innerHTML = result1;
+    }
+    function a2(){
+        let b1 = document.getElementById("n1").value;
+        let b2 = document.getElementById("n2").value;
+        let result2 = b1 - b2;
+        document.getElementById("ketqua").innerHTML = result2;
+    }
+    function a3(){
+        let b1 = document.getElementById("n1").value;
+        let b2 = document.getElementById("n2").value;
+        let result3 = b1 * b2;
+        document.getElementById("ketqua").innerHTML = result3;
+    }
+    function a4(){
+        let b1 = document.getElementById("n1").value;
+        let b2 = document.getElementById("n2").value;
+        let result4 = b1 / b2;
+        document.getElementById("ketqua").innerHTML = result4;
+    }
+</script>
+</body>
+</html>
