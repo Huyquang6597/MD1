@@ -5,15 +5,19 @@
     <title>bai 4 a</title>
 </head>
 <body>
-<input id="a" type="text">
+<input id="sta" type="text">
+<input id ="stb" type="text">
 <button onclick="a1()">Click</button>
+<h1 id="kq"></h1>
 <script>
-    function a1() {
-        let b = document.getElementById(a).value;
-        let c = 4 * b;
-        let d = b * b;
-        document.write("chu vi: " +c);
-        document.write("Dien tich: " +d);
+
+        let c = document.getElementById("sta")
+        let d = document.getElementById("stb")
+        let kq = document.getElementById("kq")
+function a1(){
+            let chuVi = c.value * 4;
+            let dienTich = c.value * c.value;
+            kq.innerHTML= "Chu Vi: " + chuVi + ",Diện tích:  " + dienTich;
     }
     </script>
 </body>
