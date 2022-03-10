@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bai 3</title>
+    <title>Nhan a va b tu 2 o input và hien thi ra S=a*b ra thẻ h1</title>
 </head>
 <body>
-<input id="a" type="text">
+<input type="text" id="a">
+<input type="text" id="b">
 <button onclick="a1()">Click</button>
+<h1 id="c">Kết quả</h1>
 <script>
-    function a1() {
-        let b = document.getElementById(a).value;
-        let c = b * b;
-        document.write()
+    function a1(){
+        let b1 = document.getElementById("a").value;
+        let b2 = document.getElementById("b").value;
+        let kq = b1 * b2;
+        document.getElementById("c").innerHTML = kq
     }
 </script>
 </body>
