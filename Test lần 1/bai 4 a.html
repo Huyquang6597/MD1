@@ -5,12 +5,16 @@
     <title>bai 4 a</title>
 </head>
 <body>
+<input id="a" type="text">
+<button onclick="a1()">Click</button>
 <script>
-let a = +prompt('Cạnh hình vuông');
-let p = (4*a);
-let s = (a*a);
-document.write('Chu vi: ' + p);
-document.write('<br>Diện Tích: ' + s);
-</script>
+    function a1() {
+        let b = document.getElementById(a).value;
+        let c = 4 * b;
+        let d = b * b;
+        document.write("chu vi: " +c);
+        document.write("Dien tich: " +d);
+    }
+    </script>
 </body>
 </html>
