@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<input type="text" id="n1">
+<input type="text" id="n2">
+<br><br>
+<button onclick="a1()" id="nhan">Multiplication(X)</button>
+<h1 id="ketqua">S= </h1>
+<script>
+function a1(){
+    let b1 = document.getElementById("n1").value;
+    let b2 = document.getElementById("n2").value;
+    let result1 = b1 * b2;
+    document.getElementById("ketqua").innerHTML =    result1;
+}
+</script>
+</body>
+</html>
