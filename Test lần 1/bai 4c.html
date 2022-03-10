@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhap vao a va b , tinh tong cac so tu a den b</title>
+</head>
+<body>
+<input type="text" id="sta">
+<input type="text" id="stb">
+<button onclick="aaa()">Click me</button>
+<h1 id="result1"></h1>
+<script>
+    let b1 = document.getElementById("sta");
+    let b2 = document.getElementById("stb");
+    let kq = document.getElementById("result1");
+    function aaa() {
+        let a = +b1.value;
+        let b = +b2.value;
+        kq.innerHTML = (a + b) * (b -a + 1)/2 + " ";
+    }
+</script>
+</body>
+</html>
