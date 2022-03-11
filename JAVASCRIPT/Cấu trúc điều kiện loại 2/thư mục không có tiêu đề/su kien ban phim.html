@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()" >
+<img id="hihi" src="https://i.insider.com/5484d9d1eab8ea3017b17e29?width=600&format=jpeg&auto=webp"
+     style="position: absolute; top: 0; left: 0;" height="200" width="180"/>
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById("hihi");
+        element.style.top = parseInt(element.style.top) - 10 + 'px';
+    }
+
+    function downArrowPressed() {
+        let element = document.getElementById("hihi");
+        element.style.top = parseInt(element.style.top) + 10 + 'px';
+    }
+
+    function leftArrowPressed() {
+        let element = document.getElementById("hihi");
+        element.style.top = parseInt(element.style.top) - 10 + 'px';
+    }
+
+    function rightArrowPressed() {
+        let element = document.getElementById("hihi");
+        element.style.top = parseInt(element.style.top) + 10 + 'px';
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keycode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+        function docReady(){
+            window.addEventListener('keydown', moveSelection);
+        }
+    }
+
+</script>
+</body>
+</html>
