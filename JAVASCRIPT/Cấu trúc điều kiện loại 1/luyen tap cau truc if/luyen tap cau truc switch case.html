@@ -23,18 +23,31 @@
     //}
 
 
-    let a = parseInt(prompt('a?', ''));
-    switch (a) {
-        case 0:
-            alert(0);
-            break;
+    <!-- let a = parseInt(prompt('a?', ''));
+     switch (a) {
+         case 0:
+             alert(0);
+             break;
+         case 1:
+             alert(1);
+             break;
+         case 2:
+         case 3:
+             alert('2,3');
+             break;
+     } !-->
+
+    let a = parseInt(prompt('Type a number', 0));
+
+    switch ((a > 0) ? 1 : (a < 0) ? -1 : 0) {
         case 1:
             alert(1);
             break;
-        case 2:
-        case 3:
-            alert('2,3');
+        case -1:
+            alert(-1);
             break;
+        default :
+            alert(0);
     }
 </script>
 </body>
