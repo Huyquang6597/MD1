@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="hh" style="color: red"></h1>
+<script>
+ let a1 = eval(prompt("Nhập số cân nặng: "));
+ let a2 = eval(prompt("nhập số chiều cao: "));
+ let bmi = eval(a1/(a2*a2));
+ if (bmi < 18)
+     document.getElementById("hh").innerHTML = "Gầy quá"
+      //   document.write("Underweight");
+ else if (bmi < 25.0)
+    // document.write("Normal");
+     document.getElementById("hh").innerHTML = "Bình thường"
+ else if (bmi < 30.0)
+     //document.write("Overweight");
+     document.getElementById("hh").innerHTML = "Béo quá"
+ else
+     document.getElementById("hh").innerHTML = "Sập nhà rồi !"
+</script>
+</body>
+</html>
