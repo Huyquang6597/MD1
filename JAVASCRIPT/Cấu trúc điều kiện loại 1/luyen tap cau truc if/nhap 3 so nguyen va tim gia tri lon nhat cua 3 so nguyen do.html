@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num1">
+<input type="number" id="num2">
+<input type="number" id="num3">
+<button onclick="sosanh()">So sánh</button>
+<p id="result">kết quả:</p>
+<script>
+    function sosanh() {
+        let num1 = +document.getElementById("num1").value;
+        let num2 = +document.getElementById("num2").value;
+        let num3 = +document.getElementById("num3").value;
+        let max = num1;
+        if (num2 > max) {
+            max = num2
+        }
+        if (num3 > max) {
+            max = num3
+        }
+        document.getElementById("result").innerHTML = "" +max;
+    }
+</script>
+</body>
+</html>
