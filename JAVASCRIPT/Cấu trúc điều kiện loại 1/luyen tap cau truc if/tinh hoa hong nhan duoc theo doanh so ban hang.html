@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Nhập họ tên nhân viên</th>
+
+    <th>Nhập lương cơ bản của nhân viên (Triệu)</th>
+    <th>Nhập hoa hồng của nhân viên (Triệu)</th>
+    </tr>
+    <td>
+<input type="text" id="ht" style="width: 300px"></td>
+    <td>
+<input type="number" id="cb" style="width:300px"></td>
+    <td>
+<input type="number" id="hh" style="width: 300px"></td>
+    <td>
+<button onclick="tinhLuong()">Tính Lương</button>
+    </td>
+
+</table>
+<h2 id="abc"></h2>
+<h3 id="bcd"></h3>
+<script>
+    function tinhLuong() {
+        let hien1 = document.getElementById("ht").value;
+        document.getElementById("abc").innerHTML = (hien1)
+        let a = +document.getElementById("cb").value;
+        let b = +document.getElementById("hh").value;
+        let L
+        if (0<b<=8) {
+            L = (a + b*5/100)
+            document.getElementById("bcd").innerHTML = ('Lương thực lĩnh là: '+ '' + L);
+        }
+        if (8<b<=15){
+            L = (a + b*10/100)
+            document.getElementById("bcd").innerHTML = ('Lương thực lĩnh là: '+ '' +L);
+        }
+        if (15<b<=20){
+            L = (a + b*15/100)
+            document.getElementById("bcd").innerHTML = ('Lương thực lĩnh là: '+ '' +L);
+        }
+    }
+</script>
+<p> NOTE: Đề bài: Nhập và hiển thị tên Nhân viên cùng công thức tính lương như sau:</p>
+<p> Nhập lương cứng của Nhân viên <br>
+    Nhập hoa hồng của Nhân viên <br>
+    Lương thực lĩnh = Lương cứng + Hoa Hồng<br>
+</p>
+<p>
+    Công thức tính Hoa Hồng <br>
+    - Nếu Doanh thu là: 0 triệu - 8 triệu<br>
+    Hoa Hồng là: 5% của Doanh Thu<br>
+    - Nếu Doanh thu là: >8 -15 triệu<br>
+    Hoa Hoa Hồng là: 10% của Doanh Thu<br>
+    - Nếu Doanh thu là: >15 – 25 triệu<br>
+    Hoa Hoa Hồng là: 15% của Doanh Thu<br>
+</p>
+</body>
+</html>
