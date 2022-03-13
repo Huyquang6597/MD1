@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập số bất kì</h1>
+<input type="number" id="ddd">
+<button onclick="thucThi()">Kiểm tra</button></td>
+<h1 id="hihi"></h1>
+<script>
+function thucThi() {
+    let a = +document.getElementById("ddd").value;
+    if (0<a && a<120){
+        document.getElementById("hihi").innerHTML = ('Đây là số tuổi của người');
+    } else {
+        document.getElementById("hihi").innerHTML = ('Đây không phải là số tuổi của người');
+    }
+}
+</script>
+</body>
+</html>
