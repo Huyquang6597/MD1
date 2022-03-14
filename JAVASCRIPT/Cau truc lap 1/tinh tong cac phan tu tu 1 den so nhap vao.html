@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập số bất kỳ</h1>
+<input type="number" id="abc">
+<button onclick="thucThi()">Click me</button>
+<h1 id="kq"></h1>
+<script>
+    function thucThi() {
+        let a = document.getElementById("abc").value;
+        let total = 0;
+        let i ;
+        for (i = 1; i <= a; i = i + 1) {
+            total = total + i;
+        }
+        document.getElementById("kq").innerHTML = ("Tổng các phần tử từ 1 tới số mới nhập là: " + total);
+    }
+</script>
+</body>
+</html>
