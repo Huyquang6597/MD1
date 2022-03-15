@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+   let a = +prompt("Nhập vào số: ");
+   let  check = "snt"
+   for (let i = 2 ; i < a; i++){
+       if (a % i == 0){
+           check = "ksnt";
+       }
+   } if (check == "snt"){
+       alert("Là số nguyên tố");
+   } else {
+       alert("Không là số nguyên tố");
+   }
+
+</script>
 </body>
 </html>
