@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let st1 = 0;
+    let st2 = 1;
+    let count = 1;
+    let amount = prompt("Nhập số bất kỳ");
+    while ( count <= amount-2 ){
+        let st3 = st1 + st2
+        if (st3 % 5 == 0){
+        document.write(+ st3 + " là số đầu tiên trong dãy chia hết cho 5");
+        break;
+    }
+        st1=st2
+        st2=st3
+        count++
+    }
+
+</script>
+</body>
+</html>
