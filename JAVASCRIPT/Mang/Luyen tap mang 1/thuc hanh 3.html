@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình
+        của các phần tử trong mảng</title>
 </head>
 <body>
-$END$
+<script>
+    let number = [4, 0, 3, 54, 13, 7, 20, 7];
+    let max = number[0];
+    let tb = 0;
+    let total = 0;
+    for (let i = 0; i < number.length; i++) {
+        total = total + number[i];
+        if (number[i] > max) {
+            max = number[i];
+        }
+    }
+    tb = total / (number.length);
+    document.write("giá trị lớn nhất là: " + max + "<br>" + 'giá trị trung bình của các phần tử trong mảng là: ' + tb)
+</script>
 </body>
 </html>

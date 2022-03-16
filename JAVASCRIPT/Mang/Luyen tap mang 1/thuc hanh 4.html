@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</title>
 </head>
 <body>
-$END$
+<script>
+    let number = [4, 5, 21, 7, 12, 53, 6, 3];
+    let first = 0;
+    let last = number.length - 1;
+    while (first < last) {
+        let b = number[first];
+        number[first] = number[last];
+        number[last] = b;
+        first++;
+        last--;
+    }
+    document.write(number);
+
+</script>
 </body>
 </html>
