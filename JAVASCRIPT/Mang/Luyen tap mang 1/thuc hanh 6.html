@@ -9,7 +9,7 @@
 </head>
 <body>
 <script>
-  let arr = new Array(10);
+/* Cách 1  let arr = new Array(10);
     for (let i = 0; i < arr.length; i++) {
         arr[i] = +prompt("Nhập số phần tử vào trong mảng ");
     }
@@ -19,7 +19,21 @@
             alert("V is in the array");
         } else {
             alert("V is not in the array");
-        }
+        }*/
+
+  let a = [];
+  for (let i = 0 ; i < 5 ; i++)/*Nhập vào 5 lần (bắt đầu từ số i=0 ) */
+  {
+      let ac = +prompt("Nhập vào V" + i) /*nhập vào số */
+      a.push(ac); /*Thêm phần tử a1 vào mảng a đầu tiên*/
+
+  } let V = arr.indexOf(a);
+if (V !== -1){
+    alert("V is in the array")
+} else {
+    alert("V is not in the array")
+}
+
 </script>
 </body>
 </html>
