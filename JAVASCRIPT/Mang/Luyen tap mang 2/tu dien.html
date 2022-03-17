@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<script>
+    let anhs = ['dog', 'cat' ,'chicken' , 'lion' , 'dragon'];
+    let viets = ['chó' , 'mèo' , 'gà', 'sư tử ' , 'rồng'];
+    let txt = prompt("Nhập từ muốn dịch: ");
+    let viTri = anhs.indexOf(txt); //Tìm vị trí của từ người dùng vừa nhập trong mảng từ đã khai
+    if (viTri == -1){
+        alert("Từ vừa nhập không có trong từ điển");
+    } else {
+        alert(viets[viTri]) //hiển trị từ vừa nhập trong mảng viets đã khai
+    }
+</script>
+</body>
+</html>
