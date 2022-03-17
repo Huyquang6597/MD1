@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong
+        mảng. </title>
+</head>
+<body>
+<script>
+    /*    let arr = ["a","5b9ba", 9,8,34];
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+        if (arr[i]%1===0) {
+        count = count + 1
+    } else {
+        let a = arr[i].split("")
+        for (let j = 0; j < a.length; j++) {
+        if (a[j] % 1 === 0) {
+        count += 1;
+    }
+    }
+    }
+    }
+        document.write(count) */
+
+    let a = ["a","5b9ba", 9,8,34];
+    let count = 0;
+    for (let i = 0 ; i<a.length; i++){
+        if (isNaN(a[i]) == false) {
+count++;
+        }
+    } alert(count)
+</script>
+</body>
+</html>
