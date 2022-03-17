@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> lưu các phần tử được nối từ hai mảng b và a vào mảng c </title>
+</head>
+<body>
+<script>
+    let x= new Array (3);
+    let y= new Array (2);
+    for(let i=0;i<x.length ;i++) {
+        x[i]= +prompt( "nhap x ")
+    }
+    for(let k=0;k<y.length ;k++) {
+        y[k]= +prompt( "nhap y ")
+    }
+
+    let c=x.concat(y)
+    document.write(c)
+
+</script>
+
+</body>
+</html>

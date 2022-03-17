@@ -8,6 +8,18 @@
     </title>
 </head>
 <body>
-
+<script>
+  let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("Nhập số phần tử vào trong mảng ");
+    }
+        let numV = +prompt("Nhập vào số nguyên V");
+        let rsV = arr.indexOf(numV);
+        if (rsV !== -1) {
+            alert("V is in the array");
+        } else {
+            alert("V is not in the array");
+        }
+</script>
 </body>
 </html>
