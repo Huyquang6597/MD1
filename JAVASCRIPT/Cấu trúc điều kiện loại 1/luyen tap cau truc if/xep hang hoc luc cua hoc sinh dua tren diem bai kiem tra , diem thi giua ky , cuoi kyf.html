@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-
+<input type="number" id="kt">
+<input type="number" id="gk">
+<input type="number" id="cc">
+<button onclick="ketqua()">Kết Quả</button>
+<p id="result">Xếp Loại</p>
+<script>
+    function ketqua() {
+        let kt1 = +document.getElementById("kt").value;
+        let gk1 = +document.getElementById("gk").value;
+        let cc1 = +document.getElementById("cc").value;
+    let result = (kt1 + gk1 + cc1)/3;
+if (result >= 8){
+    document.getElementById("result").innerHTML = ("xếp loại Giỏi");
+}
+else if (result >= 6.5){
+    document.getElementById("result").innerHTML = ("xếp loại Khá");
+}
+else {
+    document.getElementById("result").innerHTML = ("xếp loại Yếu");
+}
+    }
+</script>
 </body>
 </html>

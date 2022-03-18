@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
+<table>
+    <tr>
+        <th>Cước phí bắt buộc</th>
+        <td></td>
+        <th>Số phút (Bắt đầu tính từ lúc gọi)</th>
+    </tr>
+    <td>25.000VND</td>
+<td></td>
+    <td>
+        <input type="number" id="minute" style="width: 300px"></td>
+    <td>
+        <button onclick="cuocDT()">Cước điện thoai</button></td>
+    </tr>
+
+</table>
+<h2 id="abc"></h2>
+<script>
+    function cuocDT(){
+        let a = document.getElementById("minute").value;
+        let L
+        if (0<minute<=50) {
+            L = (25000 + 600 * a)
+            document.getElementById("abc").innerHTML = ('Cước điện thoại: ' + '' + L + ' VNĐ');
+        }
+        if (50<minue<=150)
+            L = (25000 + 400 * a)
+        document.getElementById("abc").innerHTML = ('Cước điện thoại: ' + '' + L + ' VNĐ');
+    }
+    if (150 < minute)
+        L = (25000 + 200 * a)
+    document.getElementById("abc").innerHTML = ('Cước điện thoại: ' + '' + L + ' VNĐ');
+</script>
+<p>NOTE :Đề Bài: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</p>
+<p>Phí bắt buộc là 25000 VND</p>
+<p>Cước điện thoại = Phí bắt buộc + Số phút gọi</p><br>
+<p> Phí thuê bao bắt buộc là 25 nghìn.</p>
+  <p> 600 đồng cho mỗi phút gọi của 50 phút đầu tiên.</p>
+<p>400 đồng cho mỗi phút gọi của 150 phút tiếp theo.</p>
+ <p>   200 đồng cho bất kỳ mỗi phút nào sau 150 phút.</p>
 
 </body>
 </html>

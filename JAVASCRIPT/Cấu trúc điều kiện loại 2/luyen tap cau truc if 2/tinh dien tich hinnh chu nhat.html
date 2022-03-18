@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+            <th>Nhập cạnh a bất kỳ</th>
+            <th>Nhập cạnh b bất kỳ</th>
+    </tr>
+    <tr>
+        <td>
+
+        <input type="number" id="aa">
+        </td>
+        <td>
+        <input type="number" id="bb">
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+            <button onclick="thucThi()">Tính</button></td>
+    </tr>
+
+</table>
+<h1 id="hehe"></h1>
+<script>
+    function thucThi() {
+        let a = document.getElementById("aa").value;
+        let b = document.getElementById("bb").value;
+        let s = a * b
+        document.getElementById("hehe").innerHTML = ('Diện tích hình chữ Chữ nhật: ' + s);
+    }
+</script>
 </body>
 </html>

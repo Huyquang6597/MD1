@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai 4 a</title>
+    <title>nhap vao a , hien thi ra chu vi va dien tich hinh vuong do dai canh a</title>
 </head>
 <body>
+<input id="sta" type="text">
+<input id ="stb" type="text">
+<button onclick="a1()">Click</button>
+<h1 id="kq"></h1>
 <script>
-let a = +prompt('canh hinh vuong');
-let p = (4*a);
-document.write('chu vi: ' + p);
-</script>
+
+        let c = document.getElementById("sta")
+        let kq = document.getElementById("kq")
+function a1(){
+            let chuVi = c.value * 4;
+            let dienTich = c.value * c.value;
+            kq.innerHTML= "Chu Vi: " + chuVi + ", Diện tích:  " + dienTich;
+    }
+    </script>
 </body>
 </html>

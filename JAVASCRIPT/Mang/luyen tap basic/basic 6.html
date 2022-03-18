@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let number = [2, 4, 5, 12, 545, 123, 24, 6, 10, 16];
+    let a = +prompt("nhập sô bất kỳ");
+    let dem = 0;
+    for (let i = 0; i < number.length; i++) {
+        if (a === number[i]) {
+            document.write('Vị trí của ' + a + 'là' + i + "<br>");
+            dem++;
+        }
+    }
+    if (dem == 0) {
+        document.write("-1")
+    }
+</script>
 </body>
 </html>

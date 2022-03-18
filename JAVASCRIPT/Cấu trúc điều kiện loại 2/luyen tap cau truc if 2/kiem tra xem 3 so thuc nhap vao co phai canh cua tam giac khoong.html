@@ -5,6 +5,28 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" id="sta">
+<input type="text" id="stb">
+<input type="text" id="stc">
+<button onclick="tinh()">Ấn</button>
+<h1 id="kq"></h1>
+<script>
+    function tinh() {
+    let a = document.getElementById('sta');
+    let b = document.getElementById('stb');
+    let c = document.getElementById('stc');
 
+
+        let ca = a.value;
+        let cb = b.value;
+        let cc = c.value;
+
+        if (ca+cb>cc && cc+cb>ca && ca+cc>cb) {
+        document.write("Đây là tam giác") ;
+        } else {
+            document.write("đây không phải là tam giác");
+        }
+    }
+        </script>
 </body>
 </html>

@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Nhap vao a va b , tinh a^2 va a^b</title>
 </head>
 <body>
-$END$
+<input type="text" id="sta">
+<input type="text" id="stb">
+<button onclick="abc()">Click me</button>
+<h1 id="rs"></h1>
+<script>
+    let a1 = document.getElementById("sta")
+    let a2 = document.getElementById("stb")
+    let kq = document.getElementById("rs")
+    function abc() {
+        let a = a1.value;
+        let b = a2.value;
+        kq.innerHTML = a * a + " , " + a ** b
+    }
+</script>
 </body>
 </html>

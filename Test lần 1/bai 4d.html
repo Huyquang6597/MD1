@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>nhap vao a la nam , in ra the ky</title>
 </head>
 <body>
-
+<input type="text" id="sta">
+<button onclick="bbb()">Click me</button>
+<h1 id="result2"></h1>
+<script>
+    let c1 = document.getElementById("sta");
+    let kq = document.getElementById("result2");
+    function bbb() {
+        let nam = c1.value;
+        let theKy = parseInt(nam/100) + 1;
+        kq.innerHTML = theKy;
+    }
+</script>
 </body>
 </html>

@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  let number = [2, 4, 5, 12, 545, 123, 24, 6, 10, 16];
+  let a = +prompt("nhập sô bất kỳ");
+  let dem = 0;
+  for (let i = 0; i < number.length; i++) {
+    if (a === number[i]) {
+      dem++;
+    }
+
+  } document.write("số lượng của" + a + 'là' + dem);
+</script>
 </body>
 </html>
