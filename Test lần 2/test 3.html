@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cho trước 1 mảng 2 chiều : Tính tích các phần tử giá trị lẻ</title>
+</head>
+<body>
+<script>
+    let a = [
+        [2, 4, 5, 12, 65, 24, 68, 5],
+        [13, 5, 70, 45, 14, 50, 3, 6]
+    ]
+    let tich = 1;
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+            if (a[i][j] % 2 == 1) {
+
+                tich = tich * a[i][j];
+
+            }
+        }
+    }document.write(tich + '<br>');
+
+</script>
+</body>
+</html>
