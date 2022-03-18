@@ -2,26 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cho trước 1 mảng 2 chiều : Tìm max của các hàng </title>
+    <title>Cho trước 1 mảng 2 chiều : Tìm max các hàng </title>
 </head>
 <body>
 <script>
     let a = [
-        [2, 4, 5, 12, 65, 24, 68, 5],
+        [2, 4, 5, 12, 65, 24, 69, 5],
         [13, 5, 70, 45, 14, 50, 3, 6]
     ]
-    let min = a[0][0];
+    let max = a[0][0];
     for (let i = 0; i < a.length; i++) {
         for (let j = 0; j < a[i].length; j++) {
-            if (a[i][j] % 2 ==0 ) {
-                if (a[i][j]< min){
-                    min = a[i][j];
-                }
-
-
+            if (a[i][j] > max ) {
+                max = a[i][j];
             }
-        }
-    }document.write(min);
+        }document.write(max + '<br>');
+    }
 
 </script>
 </body>
