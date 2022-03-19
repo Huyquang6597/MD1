@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên tố</title>
+</head>
+<body>
+<input type="text" id="vao">
+<button onclick="check()">Kiểm Tra</button>
+<h1 id="rs"></h1>
+
+<script>
+    let txt = document.getElementById("vao");
+    let rs = document.getElementById("rs");
+
+    function check() {
+        let num = +txt.value;
+        let kq = laSNT(num);
+        rs.innerHTML = kq;
+    }
+
+    function laSNT(x) {
+        let xxx = "là số nguyên tố!";
+        for (let i = 2; i * i < x; i++) {
+            if (x % i == 0) {
+                xxx = "Không phải số nguyên tố!";
+                break;
+            }
+        }
+        return xxx;
+    }
+
+
+    /*function isPrime() {
+        let num = document.getElementById("inputNumber").value;
+        let flag = true
+        if (num < 2) {
+            flag = false
+        } else if (num === 2) {
+            flag = true;
+        } else {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    flag = false
+                    break
+                }
+            }
+        }
+        if (flag) {
+            document.getElementById("outputNumber").innerHTML = "Là số nguyên tố"
+        } else {
+            document.getElementById("outputNumber").innerHTML = "Không là số nguyên tố"
+        }
+    } */
+
+</script>
+</body>
+</html>
