@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ từ độ F sang độ C</title>
+</head>
+<body>
+<input type="text" id="txt">
+<select id="chon">
+    <option value="f">Feet to Meter</option>
+    <option value="m">Meter to Feet</option>
+</select>
+<button onclick="change()">Chuyển đổi</button>
+<h1 id="rs"></h1>
+<script>
+    let ST = document.getElementById('txt');
+    let ch = document.getElementById("chon");
+    let rs = document.getElementById('rs');
+
+    function change() {
+        let luaChon = ch.value;
+        let so = ST.value;
+        if (luaChon == "f") {
+            rs.innerHTML = feettometer(so);
+        } else {
+            rs.innerHTML = metertofeet(so);
+        }
+    }
+
+    function feettometer(feet) {
+        let meter = 0.305 * feet;
+        return meter;
+    }
+
+    function metertofeet(meter) {
+        let feet = 3.279 * meter;
+        return feet;
+    }
+
+</script>
+</body>
+</html>
