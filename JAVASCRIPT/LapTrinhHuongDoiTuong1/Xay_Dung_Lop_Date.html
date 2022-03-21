@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let MyDate = function (day, month, year) {
+  /*  let MyDate = function (day, month, year) {
         this.day = day;
         this.month = month;
         this.year = year;
@@ -24,16 +24,77 @@
             this.month = month;
             this.year = year;
         }
-        this.toString() = function (setDate){
-            return (day + "/" + month + "/" + year)
+        this.toString(){
+            return ((this.getDay() + "/" + this.getMonth() + "/" + this.getYear()))
         }
 
+
     }
-    /*   let date = new MyDate(10, 10, 2019);
+      let date = new MyDate(10, 10, 2019);
        let day = date.getDay(10)
        let month = date.getMonth(10);
        let year = date.getYear(2019);
            alert(day + "/" + month + "/" + year); */
+
+
+
+
+      class myDate {
+      day
+      month
+      year
+
+      constructor(day, month, year) {
+      this.day = day;
+      this.month = month;
+      this.year = year;
+  }
+
+      getDay() {
+      return this.day
+  }
+
+      setDay(day) {
+      this.day = day
+  }
+
+      getMonth() {
+      return this.month
+  }
+
+      setMonth(month) {
+      this.month = month
+  }
+
+      getYear() {
+      return this.year
+  }
+
+      setYear(year) {
+      this.year = year
+  }
+
+      setDate(day, month, year) {
+      this.day = day
+      this.month = month
+      this.year = year
+  }
+
+      toString() {
+      console.log((this.getDay() + "/" + this.getMonth() + "/" + this.getYear()))
+  }
+  }
+
+      let date = new myDate(2, 2, 2007)
+      console.log(date.getDay() + "/" + date.getMonth() + "/" + date.getYear())
+      date.setDay(10)
+      date.setMonth(10)
+      date.setYear(2019)
+      console.log(date.getDay() + "/" + date.getMonth() + "/" + date.getYear())
+      date.setDate(22, 11, 2021)
+      date.toString()
+
+
 
 </script>
 </body>
