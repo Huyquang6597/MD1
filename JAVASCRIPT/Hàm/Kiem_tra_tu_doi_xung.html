@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    let chuoi = "abc1cba";
+    let check = "Giong";
+    for (let i = 0; i < chuoi.length; i++) {
+        if (chuoi[i] !== chuoi[chuoi.length - i - 1]) {
+            check = "khong giong";
+        }
+    } alert(check)
+</script>
+</body>
+</html>
