@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng
+        không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </title>
+</head>
+<body>
+<script>
+    x = prompt("mang ki tu, kí tự bất kì")
+    y = prompt(" kí tự bất kì")
+
+    function solan(a, b) {
+        dem = 0
+        let arr = a.split(',')
+        for (let i = 0; i < a.length; i++) {
+            if (b === arr[i]) {
+                dem++
+            }
+            }
+            if (dem == 0) {
+                alert(-1)
+            } else {
+                alert(dem)
+            }
+    }
+
+    solan(x, y)
+</script>
+
+</body>
+</html>

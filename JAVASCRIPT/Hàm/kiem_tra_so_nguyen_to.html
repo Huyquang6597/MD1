@@ -21,7 +21,7 @@
 
     function laSNT(x) {
         let xxx = "là số nguyên tố!";
-        for (let i = 2; i * i < x; i++) {
+        for (let i = 2; i * i <= x; i++) {
             if (x % i == 0) {
                 xxx = "Không phải số nguyên tố!";
                 break;
