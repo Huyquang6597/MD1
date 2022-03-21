@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</title>
+</head>
+<body>
+<input type="number" id="a1">
+<input type="number" id="a2">
+<input type="number" id="a3">
+<button onclick="ktra()">Kiểm tra</button>
+<h1 id="rs"></h1>
+<script>
+    function snn(a1, a2, a3) {
+        min = a1;
+        if (a2 <= min) {
+            min = a2;
+        }
+        if (a3 <= min) {
+            min = a3;
+        }
+        return min
+    }
+
+    function ktra() {
+        let x = document.getElementById("a1").value;
+        let y = document.getElementById("a2").value;
+        let z = document.getElementById("a3").value;
+        rs.innerHTML = snn(x, y, z)
+    }
+</script>
+</body>
+</html>
