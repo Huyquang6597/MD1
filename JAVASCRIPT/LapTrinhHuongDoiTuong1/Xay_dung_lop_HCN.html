@@ -7,46 +7,43 @@
 <body>
 <canvas id="cv" style="width: 500px; height: 500px; border: 1px solid;"></canvas>
 <script>
-    class HCN {
+        class HCN {
         cd;
         cr;
         mau;
         x;
         y;
 
-        constructor(cd, cr, mau, x, y) {
-            this.cr = cd;
-            this.cr = cr;
-            this.mau = mau;
-            this.x = x;
-            this.y = y;
-        }
-
-        tinhCV() {
-            return (this.cr + this.cd) * 2;
-        }
-
-        tinhDT() {
-            return (this.cd * this.cr);
-        }
-
-        ve() {
-            let ctx = document.getElementById('cv').getContext('2d');
-            ctx.beginPath();
-            ctx.fillStyle = this.mau
-            ctx.fillRect(this.x, this.y, this.cd, this.cr);
-//ctx.fill();
-            ctx.closePath()
-        }
+        constructor(s1, s2, s3, s4, s5) {
+        this.cd = s1;
+        this.cr = s2;
+        this.mau = s3;
+        this.x = s4;
+        this.y = s5;
     }
 
-    let h1 = new HCN();
-    let h1 = new HCN(300, 100, "red", 10, 10);
+        tinhCV() {
+        return (this.cr + this.cd) * 2;
+    }
 
-    h1.ve()
+        tinhDT() {
+        return (this.cd * this.cr);
+    }
 
-    let h2 = new HCN(50, 100, "green", 50, 50);
-    h2.ve()
+        ve() {
+        let ctv = document.getElementById('cv').getContext('2d');
+        ctv.beginPath();
+        ctv.fillStyle = this.mau
+        ctv.fillRect(this.x, this.y, this.cd, this.cr);
+        ctv.closePath()
+    }
+
+    }
+
+        let h2r = new HCN(100,100,"yellow",10,10)
+        h2r.ve()
+
+
     //alert(h1.tinhCV())
 </script>
 </body>
