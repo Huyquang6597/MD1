@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm đếm số ký tự nguyên âm trong một chuỗi cho trước. Hàm có 1 tham số truyền vào mà một mảng các ký tự.
+        Hàm trả về false nếu không có ký tự nguyên âm nào.
+        Viết chương trình nhập vào một chuỗi bất kỳ. Gọi hàm tìm số ký tự nguyên âm vừa xây dựng ở trên. Nguyên âm là
+        các ký tự: a, o, e, u, i
+    </title>
+</head>
+<body>
+<script>
+    function count(chuoi){
+        let dem = 0;
+        for (let i = 0 ; i<chuoi.length;i++){
+ if(chuoi[i]=='a'||chuoi[i]=='o'|| chuoi[i]=='e'||chuoi[i]=='u'||chuoi[i]=='i'){
+     dem++;
+ }
+        }alert(dem)
+    } alert(count('quanghuy'))
+</script>
+</body>
+</html>
