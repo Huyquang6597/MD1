@@ -1,4 +1,4 @@
- *
+/* *
 {
     padding: 0;
     margin: 0;
@@ -10,84 +10,89 @@ body
     display: grid;
     place-items: center;
     height: 100vh;
-}
-#container
+} */
+.game
 {
     height: 400px;
     width: 1200px;
+    margin: auto;
+    border: 1px solid black;
+    overflow: hidden;
+}
+#dino
+{
+    height: 70px;
+    width: 70px;
     position: relative;
-    border: hidden;
-}
-#container #dino
-{
-    height: 70px;
-    width: 70px;
-    position: absolute;
-    bottom:5px;
-    left: 20px;
+    top:300px;
+    background-image: url("dino.png");
+    background-size: 70px 70px;
 
-}
-#container #dino img
-{
-    height: 70px;
-    width: 70px;
 }
 .dinoActive{
-    animation: animateDino 1s linear infinite;
+    animation: dinoAnimate 0.5s linear infinite;
 }
-@keyframes animateDino {
-    0%,100%
-    {
-        bottom: 28px;
-    }
-    45%,55%
-    {
-        bottom: 160px;
-    }
-}
-#container #block
-{
-    height: 70px;
-    width: 125px;
-    position: absolute;
-    bottom: 20px;
-    right: -20px;
 
+.jump {
+    animation: jump 1s linear;
 }
-#container #block img
-{
-    height: 80px;
-    width: 125px;
-}
-.blockActive
-{
-    animation: blockAnimate 1s linear infinite;
-}
-@keyframes blockAnimate {
+@keyframes jump {
     0%
     {
-        right: -125px;
+        top: 290px;
+    }
+    30%
+    {
+        top: 240px;
+    }
+    50%
+    {
+        top: 210px;
+    }
+    80%
+    {
+        top: 240px;
     }
     100%
     {
-        right: 100%;
+        top: 290px;
     }
 }
-#container #road
+#block
+{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 240px;
+    left: 1100px;
+
+    background-image: url("block.png");
+    background-size: 70px 70px;
+    animation: blockAnimate 2s infinite linear;
+}
+
+
+@keyframes blockAnimate {
+    0%
+    {
+        left: 1100px;
+    }
+    100%
+    {
+        left: 0px;
+    }
+}
+#road
 {
     height: 30px;
-    width: 1200px;
-    position: absolute;
-    bottom: 0;
+    width: 2800px;
+    position: relative;
+    top: 230px;
+    background-image: url("road.png");
+    /*background-size: 10px  -1000px;*/
+    animation: roadAnimate 2s infinite linear;
 }
-#container #road img
-{
-    height: 30px;
-    width: 2000px;
-    position: absolute;
-    left: 0;
-    animation: roadAnimate 1s linear infinite;
-}
+
 @keyframes roadAnimate{
     0%
     {
@@ -98,26 +103,21 @@ body
         left: -800px;
     }
 }
-#container #cloud
+#cloud
 {
     height: 80px;
-    width: 1200px;
+    width: 200px;
     border-radius: 40px;
-    position: absolute;
-    top: 30px;
+    position: relative;
+    background-image: url("Cloud.png");
+    top: 5px;
+    left: 500px;
 }
 
-#container #cloud img
-{
-    height: 80px;
-    width: 100px;
-    position: absolute;
-    left: -1000px;
-    animation: none;
-}
+
 @keyframes cloudAnimate {
     0%{
-        left: -2000px;
+        left: -1000px;
     }
     100%{
         left: 100%;
@@ -127,9 +127,9 @@ body
 {
     height: auto;
     width: auto;
-    position: absolute;
-    top: 20px;
-    right: 0;
+    position: relative;
+    top: -150px;
+    right: -1050px;
 }
 #gameOver
 {
