@@ -1,4 +1,4 @@
-/* *
+/**
 {
     padding: 0;
     margin: 0;
@@ -27,13 +27,10 @@ body
     top:300px;
     background-image: url("dino.png");
     background-size: 70px 70px;
-
-}
-.dinoActive{
-    animation: dinoAnimate 0.5s linear infinite;
 }
 
-.jump {
+
+.jump-animation {
     animation: jump 1s linear;
 }
 @keyframes jump {
@@ -65,12 +62,10 @@ body
     position: relative;
     top: 240px;
     left: 1100px;
-
-    background-image: url("block.png");
-    background-size: 70px 70px;
     animation: blockAnimate 2s infinite linear;
+    background-image: url("block.png");
+    background-size: 50px 50px;
 }
-
 
 @keyframes blockAnimate {
     0%
@@ -79,7 +74,7 @@ body
     }
     100%
     {
-        left: 0px;
+        left: 0;
     }
 }
 #road
@@ -137,7 +132,7 @@ body
     font-size: 70px;
     position: absolute;
     left: calc(50% - 181px);
-    top: calc(50% - 40px);
+    top: calc(50% - 130px);
     width: 362px;
     height: 80px;
     color: #525252;

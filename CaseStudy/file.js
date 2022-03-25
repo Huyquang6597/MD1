@@ -1,11 +1,13 @@
 let dino = document.querySelector("#dino");
 let block = document.querySelector("#block");
 let score = document.querySelector("#score");
+let road = document.querySelector("#road");
+let cloud = document.querySelector("#cloud");
 let gameOver = document.querySelector("#gameOver");
 
 
 //declearing variable for score
-let interval = null;
+let intervalS = null;
 let playerScore = 0;
 
 //function for score
@@ -26,48 +28,47 @@ window.addEventListener("keydown", (start) => {
         let playerScore = 0;
 
     }
-    interval = setInterval(scoreCounter, 200);
+    intervalS = setInterval(scoreCounter, 200);
 
 })
-//jump your character
-function jump() {
-    if (dino.classList !== "jump") {
-        dino.classList.add("jump");
 
-        setTimeout(function () {
-            dino.classList.remove("jump");
-        }, 1000)
-    }
+//jump your character
+function jump (){
+    dino.classList.add("jump-animation");
+    setTimeout(() =>{
+        dino.classList.remove('jump-animation');
+        // jump-animation: nhảy hoạt cảnh
+    }, 1000);
 }
 
-/*
-window.addEventListener("keydown", (evt) => {
-    if (evt.key == "32")
-        if (dino.classList !== "dinoActive") {
-            dino.classList.add("dinoActive");
-
-            //remove class after 0.5s
-            setTimeout(() => {
-                dino.classList.remove("dinoActive");
-            }, 500)
-        }
-});*/
-
-let isAlive = setInterval(function () {
-    //get current dino Y position
-    let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"))
-
-    //get current dino X position
-    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"))
 
 
-//va cham
-    if (blockLeft < 50 && blockLeft > 100 && dinoTop >= 300) {
-
-        alert("game over")
+// sự kiện liên kết phím ấn thả
+window.addEventListener('keypress', () =>{
+    if(!dino.classList.contains('jump-animation')){
+        jump();
     }
-}, 10);
-
-document.addEventListener("keydown", function (event) {
-    jump();
 });
+
+//game Over if character hit the block
+
+setInterval(() => {
+    const dinoTop = parseInt(getComputedStyle(dino).getPropertyValue("top"));
+
+    const blockLeft = parseInt(getComputedStyle(block).getPropertyValue("left"));
+
+    if(blockLeft < 0){
+        block.style.display = 'none';
+    } else {
+        block.style.display = '';
+    }
+
+    if (dinoTop > 250 && blockLeft > 35 && blockLeft < 70) {
+        gameOver.style.display = "block";
+        clearInterval(intervalS);
+        console.log(1)
+        // block.classList.remove(block);
+        // road.firstElementChild.style.animation = "none";
+        // cloud.firstElementChild.style.animation = "none";
+    }
+}, 10)
