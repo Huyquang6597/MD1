@@ -1,4 +1,4 @@
-/**
+*
 {
     padding: 0;
     margin: 0;
@@ -10,7 +10,8 @@ body
     display: grid;
     place-items: center;
     height: 100vh;
-} */
+    background: url("Dinosaurs.jpeg");
+}
 .game
 {
     height: 400px;
@@ -20,13 +21,15 @@ body
     overflow: hidden;
     background-image: url("https://s3.amazonaws.com/gameartpartnersimagehost/wp-content/uploads/2017/12/Desert_Game_Background_6.jpg");
     background-size: cover;
+
 }
 #dino
 {
     height: 70px;
     width: 70px;
     position: relative;
-    top:290px;
+    top:280px;
+    left: 70px;
     background-image: url("dino.png");
     background-size: 70px 70px;
 }
@@ -38,23 +41,23 @@ body
 @keyframes jump {
     0%
     {
-        top: 300px;
+        top: 280px;
     }
     30%
     {
-        top: 240px;
+        top: 260px;
     }
     50%
     {
-        top: 200px;
+        top: 230px;
     }
     80%
     {
-        top: 240px;
+        top: 260px;
     }
     100%
     {
-        top: 300px;
+        top: 280px;
     }
 }
 #block
@@ -106,8 +109,7 @@ body
     width: 100px;
     border-radius: 40px;
     position: relative;
-    /*background-image: url("Cloud.png");*/
-
+    background-image: url("Cloud.png");
     top: -150px;
     left:700px;
 }
