@@ -4,6 +4,8 @@ let score = document.querySelector("#score");
 let road = document.querySelector("#road");
 let cloud = document.querySelector("#cloud");
 let gameOver = document.querySelector("#gameOver");
+let nhacNen = new Audio("hihihi.mp3")
+nhacNen.loop=true
 
 let playerScore = 0;
 
