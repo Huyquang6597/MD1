@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+@include media-breakpoint-down(xs) { ... }
+@include media-breakpoint-down(sm) { ... }
+@include media-breakpoint-down(md) { ... }
+@include media-breakpoint-down(lg) { ... }
+// No media query necessary for xl breakpoint as it has no upper bound on its width
+
+// Example: Style from medium breakpoint and down
+@include media-breakpoint-down(md) {
+.custom-class {
+display: block;
+}
+}
+</script>
+</body>
+</html>

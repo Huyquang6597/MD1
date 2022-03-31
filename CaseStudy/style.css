@@ -41,19 +41,19 @@ body
 @keyframes jump {
     0%
     {
-        top: 280px;
+        top: 270px;
     }
     30%
     {
-        top: 260px;
+        top: 270px;
     }
     50%
     {
-        top: 230px;
+        top: 250px;
     }
     80%
     {
-        top: 260px;
+        top: 270px;
     }
     100%
     {

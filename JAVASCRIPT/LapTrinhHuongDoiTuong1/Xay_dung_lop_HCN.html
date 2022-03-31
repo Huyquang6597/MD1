@@ -33,16 +33,22 @@
         ve() {
         let ctv = document.getElementById('cv').getContext('2d');
         ctv.beginPath();
-        ctv.fillStyle = this.mau
+        ctv.fillStyle = this.mau;
         ctv.fillRect(this.x, this.y, this.cd, this.cr);
-        ctv.closePath()
+        ctv.closePath();
     }
 
     }
 
-        let h2r = new HCN(100,100,"yellow",10,10)
-        h2r.ve()
-
+       // let h2r = new HCN(100,100,"yellow",10,10)
+        //h2r.ve()
+        let h1 = new HCN();
+        h1.cd = 150;
+        h1.cr = 150;
+        h1.x = 10;
+        h1.y = 10;
+        h1.mau = "black";
+        h1.ve();
 
     //alert(h1.tinhCV())
 </script>
