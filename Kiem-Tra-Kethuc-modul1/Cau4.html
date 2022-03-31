@@ -6,27 +6,33 @@
 </head>
 <body>
 <script>
-    class Animal{
+    class Animal {
         name;
         weight;
-        setName(name){
-            this.name=name
+
+        setName(name) {
+            this.name = name
         }
-        setWeight(weight){
-            this.weight=weight
+
+        setWeight(weight) {
+            this.weight = weight
         }
-        getName(){
+
+        getName() {
             return this.name
         }
-        getWeight(){
+
+        getWeight() {
             return this.weight
         }
-        toString(){
+
+        toString() {
             return this.name + " nặng " + this.weight
         }
 
     }
-    let objAnimal1= new Animal()
+
+    let objAnimal1 = new Animal()
     objAnimal1.setName("Elephant")
     objAnimal1.setWeight(49)
     alert(objAnimal1.toString())
